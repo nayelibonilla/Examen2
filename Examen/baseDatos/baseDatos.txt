@@ -1,0 +1,55 @@
+﻿Use BANCO
+-- Crear tabla Usuarios
+
+create table Usuarios
+(
+    UsuarioID int primary key,
+    Nombre varchar(50) not null,
+    CorreoElectronico varchar(100) not null,
+    Telefono varchar(20) null
+)
+
+-- DML Lenguaje de manipulacion de datos
+-- Insert Agregar registros
+
+insert into Usuarios (UsuarioID, Nombre, CorreoElectronico, Telefono)
+values (1, 'Carlos Perez', 'carlos@gmail.com', '88881111'),
+       (2, 'Ana Castro', 'ana@gmail.com', '88882222'),
+       (3, 'Maria Ruiz', 'maria@gmail.com', '88883333'),
+       (4, 'Jose Mora', 'jose@gmail.com', '88884444')
+
+-- Select para consultas
+
+select UsuarioID, Nombre from Usuarios
+
+select * from Usuarios
+
+select * from Usuarios where UsuarioID = 2
+
+select * from Usuarios where Nombre = 'Ana Castro'
+
+select max(UsuarioID) as Codigo from Usuarios
+
+-- update Actualizar registros
+
+update Usuarios set Telefono = '89990000'
+where UsuarioID = 1
+
+select * from Usuarios
+
+-- delete eliminar registros
+
+delete Usuarios where UsuarioID = 4
+
+select * from Usuarios
+
+/*
+CRUD
+
+C- CREATE
+R- READ
+U- UPDATE
+D- BORRAR
+*/
+
+
